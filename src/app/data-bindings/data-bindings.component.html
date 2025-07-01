@@ -1,0 +1,40 @@
+<div class="p-3">
+  <!-- Property Binding: liga o valor da propriedade 'value' do input à variável 'nome' do componente -->
+  <section>
+    <h4>Property Binding</h4>
+    <input [value]="nome" />
+  </section>
+  <hr />
+
+  <!-- Interpolação: exibe o valor da variável 'nome' diretamente no HTML -->
+  <section>
+    <h4>Interpolação</h4>
+    <p>O nome é: {{ nome }}</p>
+  </section>
+
+  <hr />
+
+  <section>
+    <h4>Class Binding</h4>
+    <select #classe (change)="(0)">
+      <option value="alert-success">Success</option>
+      <option value="alert-info">Info</option>
+      <option value="alert-danger">Error</option>
+      <option value="alert-warning">Warning</option>
+    </select>
+    <div class="alert" [class.alert-success]="classe.value === 'alert-success'">
+      <p>Success</p>
+    </div>
+    <div class="alert" [class.alert-info]="classe.value === 'alert-info'">
+      <p>Info</p>
+    </div>
+    <div class="alert" [class.alert-danger]="classe.value === 'alert-danger'">
+      <p>Error</p>
+    </div>
+    <div class="alert" [class.alert-warning]="classe.value === 'alert-warning'">
+      <p>Warning</p>
+    </div>
+  </section>
+
+  <hr>
+</div>
